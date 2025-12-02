@@ -315,9 +315,12 @@ with tab2:
             get_node_on_click=True,
             get_edge_on_click=True
         )
-        # 状态同步：更新节点位置
+        # 状态同步：更新节点位置和边数据
         if flow_result:
-            st.caption(f"选中: {flow_result}")
+            st.session_state.graph_nodes = flow_result.nodes
+            st.session_state.graph_edges = flow_result.edges
+            if flow_result.selected_id:
+                st.caption(f"选中: {flow_result.selected_id}")
     else:
         st.info("画布为空，请 AI 生成或手动添加节点")
 

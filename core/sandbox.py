@@ -1,6 +1,7 @@
 """代码沙箱 - 安全执行 LLM 生成的绘图代码"""
 
 import re
+import re
 import traceback
 import matplotlib.pyplot as plt
 import pandas as pd
