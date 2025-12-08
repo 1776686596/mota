@@ -1,0 +1,1 @@
+# SciPlot-Copilot Core Module
